@@ -1,0 +1,1571 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: whitesmoke;
+  margin-bottom: 0;
+}
+
+h2 {
+  font-family: "Poppins", sans-serif;
+  font-weight: 800;
+  font-size: 15px;
+  padding-bottom: 10px;
+}
+
+h3 {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-size: 13px;
+}
+
+.logo-img {
+  width: 30%;
+  display: block;
+  margin: 20px auto 0px;
+}
+.title-wrapper {
+  width: 100%;
+}
+
+.review-article {
+  width: 100%;
+}
+
+.review-article h2 {
+  padding: 0px 20px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 800;
+  font-size: 35px;
+  color: #111;
+  line-height: 44px;
+  text-align: center;
+}
+
+.review-article p {
+  padding: 0px 20px 20px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  color: #111;
+  line-height: 24px;
+  text-align: center;
+  margin: 0px 30px 0px;
+}
+
+.stars-container {
+  width: 80%;
+  background-image: linear-gradient(to right, #635985, #3a1078);
+  background-color: #635985;
+  padding: 0px 0px;
+  border: 1px solid #444;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin: 20px auto 0px;
+  text-align: center;
+}
+
+.stars-container .star-widget input {
+  text-align: center;
+  display: none;
+}
+
+.star-widget label {
+  font-size: 25px; /* !Star size */
+  color: white;
+  padding: 10px;
+  float: right;
+  transition: all 0.2s ease;
+  margin: auto;
+}
+
+input:not(:checked) ~ label:hover,
+input:not(:checked) ~ label:hover ~ label {
+  color: #fd4;
+}
+
+input:checked ~ label {
+  color: #fd4;
+}
+
+input#rate-5:checked ~ label {
+  color: #fe7;
+  text-shadow: 0 0 20px #952;
+}
+
+#rate-1:checked ~ form header::before {
+  content: "Terrible";
+}
+
+#rate-2:checked ~ form header::before {
+  content: "Very Poor";
+}
+
+#rate-3:checked ~ form header::before {
+  content: "Average";
+}
+
+#rate-4:checked ~ form header::before {
+  content: "Okay";
+}
+
+#rate-5:checked ~ form header::before {
+  content: "I'm Happy";
+}
+
+.stars-container form {
+  display: none;
+}
+
+#rate-1:checked ~ form {
+  display: block;
+}
+
+#rate-2:checked ~ form {
+  display: block;
+}
+
+#rate-3:checked ~ form {
+  display: block;
+}
+
+#rate-4:checked ~ form {
+  display: block;
+}
+
+#rate-5:checked ~ form {
+  display: block;
+}
+
+#rate-5:checked ~ form .textarea {
+  display: none;
+}
+
+/* input:checked ~ form{
+    display: block;
+}  */
+
+form header {
+  width: 100%;
+  font-family: "Poppins", sans-serif;
+  font-size: 30px;
+  font-weight: 800;
+  color: white;
+  padding-top: 40px;
+}
+
+form .textarea {
+  width: 100%;
+  overflow: hidden;
+  padding-top: 10px;
+  color: white;
+}
+
+form .textarea textarea {
+  height: 100px;
+  width: 100%;
+  outline: none;
+  /* border: 1px solid white; */
+  background-color: transparent;
+  padding: 10px;
+  font-size: 15px;
+  color: white;
+  font-weight: 400;
+  resize: none;
+}
+
+form .btn {
+  height: 45px;
+  width: 100%;
+  margin: 15px 0;
+}
+
+form .btn button {
+  height: 100%;
+  width: 100%;
+  border: 1px solid #444;
+  outline: none;
+  background: #d1b9e6;
+  color: black;
+  font-size: 17px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border-radius: 5px;
+}
+
+form .btn button:hover {
+  background: rgb(143, 47, 180);
+}
+
+/* !Very small screens , designed for iPhone4*/
+@media only screen and (max-width: 320px) {
+  .logo-img {
+    width: 30%;
+    display: block;
+    margin: 0px auto 0px;
+  }
+  .review-article h2 {
+    font-weight: 800;
+    font-size: 22px;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    line-height: 20px;
+  }
+
+  h2.second-h2 {
+    /*!leave a review*/
+    margin-bottom: 10px;
+  }
+
+  .review-article p {
+    padding: 0px 5px 5px;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 20px;
+    margin: 0px 20px 0px;
+  }
+
+  .stars-container {
+    width: 90%;
+    padding: 0px 0px;
+    border-radius: 15px;
+    margin: 0px auto 0px;
+  }
+
+  .star-widget label {
+    font-size: 20px; /* !Star size */
+    color: white;
+    padding: 7px;
+    float: right;
+    transition: all 0.2s ease;
+    margin: auto;
+  }
+
+  form header {
+    width: 100%;
+    font-size: 20px;
+    padding-top: 25px;
+  }
+
+  h2 {
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-size: 12px;
+    padding-bottom: 5px;
+  }
+
+  h3 {
+    font-family: "Poppins", sans-serif;
+    font-weight: 200;
+    font-size: 10px;
+  }
+
+  form .textarea {
+    width: 100%;
+    overflow: hidden;
+    padding-top: 0px;
+    color: white;
+  }
+
+  form .textarea textarea {
+    height: 100px;
+    width: 100%;
+    outline: none;
+    background-color: transparent;
+    padding: 5px;
+    font-size: 12px;
+    color: white;
+    font-weight: 100;
+    resize: none;
+  }
+
+  form .btn {
+    height: 30px;
+    width: 100%;
+    margin: 10px 0;
+  }
+
+  form .btn button {
+    height: 100%;
+    width: 100%;
+    border: 1px solid #444;
+    outline: none;
+    background: #d1b9e6;
+    color: black;
+    font-size: 15px;
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border-radius: 5px;
+  }
+}
+
+/* !Very small screens , designed for Galaxy Fold*/
+@media only screen and (max-width: 320px) and (min-height: 600px) {
+  .logo-img {
+    width: 50%;
+    display: block;
+    margin: 10px auto 10px;
+  }
+  .review-article h2 {
+    font-weight: 800;
+    font-size: 22px;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    line-height: 25px;
+  }
+
+  h2.second-h2 {
+    margin-bottom: 10px;
+  }
+
+  h3.issue-h3 {
+    margin-bottom: 15px;
+  }
+
+  .review-article p {
+    padding: 0px 5px 5px;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 20px;
+    margin: 0px 20px 10px;
+  }
+
+  .stars-container {
+    width: 100%;
+    padding: 0px 0px;
+    border-radius: 0px;
+    margin: 20px auto 0px;
+  }
+
+  .star-widget label {
+    font-size: 20px; /*! Star size */
+    color: white;
+    padding: 10px;
+    float: right;
+    transition: all 0.2s ease;
+    margin: 10px auto 10px;
+  }
+
+  form header {
+    width: 100%;
+    font-size: 20px;
+    padding-top: 25px;
+    margin-bottom: 10px;
+  }
+
+  h2 {
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-size: 12px;
+    padding-bottom: 5px;
+  }
+
+  h3 {
+    font-family: "Poppins", sans-serif;
+    font-weight: 200;
+    font-size: 10px;
+  }
+
+  form .textarea {
+    width: 100%;
+    overflow: hidden;
+    padding-top: 0px;
+    color: white;
+  }
+
+  form .textarea textarea {
+    height: 100px;
+    width: 100%;
+    outline: none;
+    background-color: transparent;
+    padding: 5px;
+    font-size: 12px;
+    color: white;
+    font-weight: 100;
+    resize: none;
+  }
+
+  form .btn {
+    height: 30px;
+    width: 100%;
+    margin: 15px 0;
+  }
+
+  form .btn button {
+    height: 100%;
+    width: 100%;
+    border: 1px solid #444;
+    outline: none;
+    background: #d1b9e6;
+    color: black;
+    font-size: 15px;
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border-radius: 5px;
+  }
+}
+
+/* !Very small screens , designed for min width 360, Note3, Note2*/
+@media only screen and (min-width: 360px) {
+  .logo-img {
+    width: 50%;
+    display: block;
+    margin: 0px auto 0px;
+  }
+
+  .review-article h2 {
+    font-weight: 800;
+    font-size: 30px;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    line-height: 40px;
+  }
+
+  h2.second-h2 {
+    /*!leave a review*/
+    margin-bottom: 15px;
+  }
+
+  h3.issue-h3 {
+    margin-bottom: 15px;
+  }
+
+  .review-article p {
+    padding: 0px 5px 5px;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 20px;
+    margin: 0px 20px 0px;
+  }
+
+  .stars-container {
+    width: 90%;
+    padding: 0px 0px;
+    border-radius: 15px;
+    margin: 20px auto 0px;
+  }
+
+  .star-widget label {
+    font-size: 25px; /*! Star size */
+    color: white;
+    padding: 10px;
+    float: right;
+    transition: all 0.2s ease;
+    margin: auto;
+  }
+
+  form header {
+    width: 100%;
+    font-size: 25px;
+    padding-top: 25px;
+  }
+
+  h2 {
+    font-family: "Poppins", sans-serif; /*! how can we improve*/
+    font-weight: 400;
+    font-size: 18px;
+    padding-bottom: 10px;
+  }
+
+  h3 {
+    font-family: "Poppins", sans-serif; /*! take a moment*/
+    font-weight: 200;
+    font-size: 13px;
+  }
+
+  form .textarea {
+    width: 100%;
+    overflow: hidden;
+    padding-top: 0px;
+    color: white;
+  }
+
+  form .textarea textarea {
+    height: 100px;
+    width: 100%;
+    outline: none;
+    background-color: transparent;
+    padding: 5px;
+    font-size: 12px;
+    color: white;
+    font-weight: 100;
+    resize: none;
+  }
+
+  form .btn {
+    height: 30px;
+    width: 100%;
+    margin: 10px 0;
+  }
+
+  form .btn button {
+    height: 100%;
+    width: 100%;
+    border: 1px solid #444;
+    outline: none;
+    background: #d1b9e6;
+    color: black;
+    font-size: 15px;
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border-radius: 5px;
+  }
+}
+
+/* !Designed for min width 360, min height 735, targeting Galaxy S8+*/
+@media only screen and (min-width: 360px) and (min-height: 735px) {
+  .logo-img {
+    width: 50%;
+    display: block;
+    margin: 0px auto 0px;
+  }
+
+  .review-article h2 {
+    font-weight: 800;
+    font-size: 30px;
+    text-align: center;
+    margin: 0;
+    padding: 0px;
+    line-height: 40px;
+  }
+
+  h2.second-h2 {
+    /*!leave a review*/
+    margin-bottom: 15px;
+  }
+
+  h3.issue-h3 {
+    margin-bottom: 15px;
+  }
+
+  .review-article p {
+    padding: 0px 30px 5px;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 20px;
+    margin: 0px 20px 0px;
+  }
+
+  .review-article p.feedback-p {
+    /*! Feedback not only */
+    margin-top: 10px;
+  }
+
+  .stars-container {
+    width: 90%;
+    padding: 0px 0px;
+    border-radius: 15px;
+    margin: 20px auto 0px;
+  }
+
+  .star-widget label {
+    font-size: 25px; /*! Star size */
+    color: white;
+    padding: 10px;
+    float: right;
+    transition: all 0.2s ease;
+    margin: auto;
+  }
+
+  form header {
+    width: 100%;
+    font-size: 25px;
+    padding-top: 25px;
+  }
+
+  h2 {
+    font-family: "Poppins", sans-serif; /*! how can we improve*/
+    font-weight: 400;
+    font-size: 18px;
+    padding-bottom: 10px;
+  }
+
+  h3 {
+    font-family: "Poppins", sans-serif; /*! take a moment*/
+    font-weight: 200;
+    font-size: 13px;
+  }
+
+  form .textarea {
+    width: 100%;
+    overflow: hidden;
+    padding-top: 0px;
+    color: white;
+  }
+
+  form .textarea textarea {
+    height: 100px;
+    width: 100%;
+    outline: none;
+    background-color: transparent;
+    padding: 5px;
+    font-size: 12px;
+    color: white;
+    font-weight: 100;
+    resize: none;
+  }
+
+  form .btn {
+    height: 30px;
+    width: 100%;
+    margin: 30px 0;
+  }
+
+  form .btn button {
+    height: 100%;
+    width: 100%;
+    border: 1px solid #444;
+    outline: none;
+    background: #d1b9e6;
+    color: black;
+    font-size: 15px;
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border-radius: 5px;
+  }
+}
+
+/* !Designed for min width 390, min height 840, iPhone 12 Pro, Pixel 5*/
+@media only screen and (min-width: 390px) and (min-height: 840px) {
+  .logo-img {
+    width: 50%;
+    display: block;
+    margin: 30px auto 20px;
+  }
+
+  .review-article h2 {
+    font-weight: 800;
+    font-size: 30px;
+    text-align: center;
+    margin: 0px;
+    padding: 0px;
+    line-height: 40px;
+  }
+
+  h2.second-h2 {
+    /*!leave a review*/
+    margin-bottom: 20px;
+  }
+
+  h3.issue-h3 {
+    margin-bottom: 20px;
+  }
+
+  .review-article p {
+    padding: 0px 30px 5px;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 20px;
+    margin: 0px 20px 0px;
+  }
+
+  .review-article p.feedback-p {
+    /*! Feedback not only */
+    margin-top: 10px;
+  }
+
+  .stars-container {
+    width: 90%;
+    padding: 0px 0px;
+    border-radius: 15px;
+    margin: 20px auto 0px;
+  }
+
+  .star-widget label {
+    font-size: 25px; /*! Star size */
+    color: white;
+    padding: 10px;
+    float: right;
+    transition: all 0.2s ease;
+    margin: 10px auto 10px;
+  }
+
+  form header {
+    width: 100%;
+    font-size: 25px;
+    padding-top: 25px;
+  }
+
+  h2 {
+    font-family: "Poppins", sans-serif; /*! how can we improve*/
+    font-weight: 400;
+    font-size: 18px;
+    padding-bottom: 10px;
+    margin: 10px auto 10px;
+  }
+
+  h3 {
+    font-family: "Poppins", sans-serif; /*! take a moment*/
+    font-weight: 200;
+    font-size: 13px;
+  }
+
+  form .textarea {
+    width: 100%;
+    overflow: hidden;
+    padding-top: 0px;
+    color: white;
+  }
+
+  form .textarea textarea {
+    height: 100px;
+    width: 100%;
+    outline: none;
+    background-color: transparent;
+    padding: 5px;
+    font-size: 12px;
+    color: white;
+    font-weight: 100;
+    resize: none;
+  }
+
+  form .btn {
+    height: 30px;
+    width: 100%;
+    margin: 30px 0;
+  }
+
+  form .btn button {
+    height: 100%;
+    width: 100%;
+    border: 1px solid #444;
+    outline: none;
+    background: #d1b9e6;
+    color: black;
+    font-size: 15px;
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border-radius: 5px;
+  }
+}
+
+/* !Designed for min width 400, min height 890, iPhone XR, Galaxy S20, Galaxy A51/71*/
+@media only screen and (min-width: 400px) and (min-height: 890px) {
+  .logo-img {
+    width: 50%;
+    display: block;
+    margin: 50px auto 20px;
+  }
+
+  .review-article h2 {
+    font-weight: 800;
+    font-size: 30px;
+    text-align: center;
+    margin: 0px;
+    padding: 0px;
+    line-height: 40px;
+  }
+
+  h2.second-h2 {
+    /*!leave a review*/
+    margin-bottom: 30px;
+  }
+
+  h3.issue-h3 {
+    margin-bottom: 20px;
+  }
+
+  .review-article p {
+    padding: 0px 30px 5px;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 20px;
+    margin: 0px 20px 0px;
+  }
+
+  .review-article p.feedback-p {
+    /*! Feedback not only */
+    margin-top: 10px auto 0px;
+  }
+
+  .stars-container {
+    width: 90%;
+    padding: 0px 0px;
+    border-radius: 15px;
+    margin: 40px auto 0px;
+  }
+
+  .star-widget label {
+    font-size: 25px; /*! Star size */
+    color: white;
+    padding: 10px;
+    float: right;
+    transition: all 0.2s ease;
+    margin: 10px auto 10px;
+  }
+
+  form header {
+    width: 100%;
+    font-size: 25px;
+    padding-top: 25px;
+  }
+
+  h2 {
+    font-family: "Poppins", sans-serif; /*! how can we improve*/
+    font-weight: 400;
+    font-size: 18px;
+    padding-bottom: 10px;
+    margin: 10px auto 10px;
+  }
+
+  h3 {
+    font-family: "Poppins", sans-serif; /*! take a moment*/
+    font-weight: 200;
+    font-size: 13px;
+  }
+
+  form .textarea {
+    width: 100%;
+    overflow: hidden;
+    padding-top: 0px;
+    color: white;
+  }
+
+  form .textarea textarea {
+    height: 100px;
+    width: 100%;
+    outline: none;
+    background-color: transparent;
+    padding: 5px;
+    font-size: 12px;
+    color: white;
+    font-weight: 100;
+    resize: none;
+  }
+
+  form .btn {
+    height: 30px;
+    width: 100%;
+    margin: 30px 0;
+  }
+
+  form .btn button {
+    height: 100%;
+    width: 100%;
+    border: 1px solid #444;
+    outline: none;
+    background: #d1b9e6;
+    color: black;
+    font-size: 15px;
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border-radius: 5px;
+  }
+}
+
+/* !Very small screens , designed for iPhone5/SE*/
+@media only screen and (width: 320px) and (height: 568px) {
+  .logo-img {
+    width: 50%;
+    display: block;
+    margin: 10px auto 10px;
+  }
+  .review-article h2 {
+    font-weight: 800;
+    font-size: 22px;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    line-height: 25px;
+  }
+
+  h2.second-h2 {
+    margin-bottom: 10px;
+  }
+
+  h3.issue-h3 {
+    margin-bottom: 15px;
+  }
+
+  .review-article p {
+    padding: 0px 5px 5px;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 20px;
+    margin: 0px 20px 10px;
+  }
+
+  .stars-container {
+    width: 90%;
+    padding: 0px 0px;
+    border-radius: 5px;
+    margin: 0px auto 0px;
+  }
+
+  .star-widget label {
+    font-size: 20px; /*! Star size */
+    color: white;
+    padding: 10px;
+    float: right;
+    transition: all 0.2s ease;
+    margin: 10px auto 0px;
+  }
+
+  form header {
+    width: 100%;
+    font-size: 20px;
+    padding-top: 25px;
+    margin-bottom: 0px;
+  }
+
+  h2 {
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-size: 12px;
+    padding-bottom: 5px;
+  }
+
+  h3 {
+    font-family: "Poppins", sans-serif;
+    font-weight: 200;
+    font-size: 10px;
+  }
+
+  form .textarea {
+    width: 100%;
+    overflow: hidden;
+    padding-top: 0px;
+    color: white;
+  }
+
+  form .textarea textarea {
+    height: 100px;
+    width: 100%;
+    outline: none;
+    background-color: transparent;
+    padding: 5px;
+    font-size: 12px;
+    color: white;
+    font-weight: 100;
+    resize: none;
+  }
+
+  form .btn {
+    height: 30px;
+    width: 100%;
+    margin: 5px 0;
+  }
+
+  form .btn button {
+    height: 100%;
+    width: 100%;
+    border: 1px solid #444;
+    outline: none;
+    background: #d1b9e6;
+    color: black;
+    font-size: 15px;
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border-radius: 5px;
+  }
+}
+
+/* !Designed for width 820, height 1180, iPad Air*/
+@media only screen and (width: 820px) and (height: 1180px) {
+  .logo-img {
+    width: 40%;
+    margin: 20px auto 20px;
+  }
+
+  .review-article h2 {
+    font-weight: 800;
+    font-size: 45px;
+    text-align: center;
+    margin: 0px;
+    padding: 0px;
+    line-height: 60px;
+  }
+
+  h2.second-h2 {
+    /*!leave a review*/
+    margin-bottom: 40px;
+  }
+
+  h3.issue-h3 {
+    margin-bottom: 20px;
+  }
+
+  .review-article p {
+    padding: 10px 90px 10px;
+    font-weight: 400;
+    font-size: 25px;
+    line-height: 30px;
+    margin: 0px 20px 0px;
+  }
+
+  .review-article p.feedback-p {
+    /*! Feedback not only */
+    margin-top: 10px auto 0px;
+  }
+
+  .stars-container {
+    width: 70%;
+    padding: 0px 0px;
+    border-radius: 15px;
+    margin: 40px auto 0px;
+  }
+
+  .star-widget label {
+    font-size: 40px; /*! Star size */
+    color: white;
+    padding: 15px;
+    float: right;
+    transition: all 0.2s ease;
+    margin: 15px auto 15px;
+  }
+
+  form header {
+    width: 100%;
+    font-size: 40px;
+    padding-top: 25px;
+  }
+
+  h2 {
+    font-family: "Poppins", sans-serif; /*! how can we improve*/
+    font-weight: 400;
+    font-size: 30px;
+    padding-bottom: 10px;
+    margin: 10px auto 10px;
+  }
+
+  h3 {
+    font-family: "Poppins", sans-serif; /*! take a moment*/
+    font-weight: 200;
+    font-size: 20px;
+  }
+
+  form .textarea {
+    width: 100%;
+    overflow: hidden;
+    padding-top: 0px;
+    color: white;
+  }
+
+  form .textarea textarea {
+    height: 100px;
+    width: 100%;
+    outline: none;
+    background-color: transparent;
+    padding: 10px;
+    font-size: 20px;
+    color: white;
+    font-weight: 100;
+    resize: none;
+  }
+
+  form .btn {
+    height: 50px;
+    width: 100%;
+    margin: 30px 0;
+  }
+
+  form .btn button {
+    height: 100%;
+    width: 100%;
+    border: 1px solid #444;
+    outline: none;
+    background: #d1b9e6;
+    color: black;
+    font-size: 20px;
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border-radius: 5px;
+  }
+}
+
+/* !Large , designed iPad Mini, iPad*/
+@media only screen and (width: 768px) and (height: 1024px) {
+  .logo-img {
+    width: 40%;
+    margin: 20px auto 20px;
+  }
+
+  .review-article h2 {
+    font-weight: 800;
+    font-size: 45px;
+    text-align: center;
+    margin: 0px;
+    padding: 0px;
+    line-height: 60px;
+  }
+
+  h2.second-h2 {
+    /*!leave a review*/
+    margin-bottom: 40px;
+  }
+
+  h3.issue-h3 {
+    margin-bottom: 20px;
+  }
+
+  .review-article p {
+    padding: 10px 90px 10px;
+    font-weight: 400;
+    font-size: 25px;
+    line-height: 30px;
+    margin: 0px 20px 0px;
+  }
+
+  .review-article p.feedback-p {
+    /*! Feedback not only */
+    margin-top: 10px auto 0px;
+  }
+
+  .stars-container {
+    width: 65%;
+    padding: 0px 0px;
+    border-radius: 15px;
+    margin: 25px auto 0px;
+  }
+
+  .star-widget label {
+    font-size: 35px; /*! Star size */
+    color: white;
+    padding: 15px;
+    float: right;
+    transition: all 0.2s ease;
+    margin: 10px auto 10px;
+  }
+
+  form header {
+    width: 100%;
+    font-size: 40px;
+    padding-top: 25px;
+  }
+
+  h2 {
+    font-family: "Poppins", sans-serif; /*! how can we improve*/
+    font-weight: 400;
+    font-size: 25px;
+    padding-bottom: 10px;
+    margin: 10px auto 10px;
+  }
+
+  h3 {
+    font-family: "Poppins", sans-serif; /*! take a moment*/
+    font-weight: 200;
+    font-size: 18px;
+  }
+
+  form .textarea {
+    width: 100%;
+    overflow: hidden;
+    padding-top: 0px;
+    color: white;
+  }
+
+  form .textarea textarea {
+    height: 100px;
+    width: 100%;
+    outline: none;
+    background-color: transparent;
+    padding: 10px;
+    font-size: 20px;
+    color: white;
+    font-weight: 100;
+    resize: none;
+  }
+
+  form .btn {
+    height: 35px;
+    width: 100%;
+    margin: 15px 0;
+  }
+
+  form .btn button {
+    height: 100%;
+    width: 100%;
+    border: 1px solid #444;
+    outline: none;
+    background: #d1b9e6;
+    color: black;
+    font-size: 20px;
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border-radius: 5px;
+  }
+}
+
+/* !Large , designed Surface Pro 7, iPad Pro*/
+@media only screen and (min-width: 900px) and (min-height: 1300px) {
+  .logo-img {
+    width: 40%;
+    margin: 100px auto 30px;
+  }
+
+  .review-article h2 {
+    font-weight: 800;
+    font-size: 55px;
+    text-align: center;
+    margin: 0px;
+    padding: 0px;
+    line-height: 70px;
+  }
+
+  h2.second-h2 {
+    /*!leave a review*/
+    margin-bottom: 40px;
+  }
+
+  h3.issue-h3 {
+    margin-bottom: 20px;
+  }
+
+  .review-article p {
+    padding: 10px 140px 10px;
+    font-weight: 400;
+    font-size: 28px;
+    line-height: 30px;
+    margin: 0px 20px 0px;
+  }
+
+  .review-article p.feedback-p {
+    /*! Feedback not only */
+    margin-top: 10px auto 0px;
+  }
+
+  .stars-container {
+    width: 65%;
+    padding: 0px 0px;
+    border-radius: 15px;
+    margin: 45px auto 0px;
+  }
+
+  .star-widget label {
+    font-size: 35px; /*! Star size */
+    color: white;
+    padding: 15px;
+    float: right;
+    transition: all 0.2s ease;
+    margin: 10px auto 10px;
+  }
+
+  form header {
+    width: 100%;
+    font-size: 40px;
+    padding-top: 25px;
+  }
+
+  h2 {
+    font-family: "Poppins", sans-serif; /*! how can we improve*/
+    font-weight: 400;
+    font-size: 25px;
+    padding-bottom: 10px;
+    margin: 30px auto 10px;
+  }
+
+  h3 {
+    font-family: "Poppins", sans-serif; /*! take a moment*/
+    font-weight: 200;
+    font-size: 18px;
+  }
+
+  form .textarea {
+    width: 100%;
+    overflow: hidden;
+    padding-top: 0px;
+    color: white;
+  }
+
+  form .textarea textarea {
+    height: 100px;
+    width: 100%;
+    outline: none;
+    background-color: transparent;
+    padding: 10px;
+    font-size: 20px;
+    color: white;
+    font-weight: 100;
+    resize: none;
+  }
+
+  form .btn {
+    height: 50px;
+    width: 100%;
+    margin: 25px 0;
+  }
+
+  form .btn button {
+    height: 100%;
+    width: 100%;
+    border: 1px solid #444;
+    outline: none;
+    background: #d1b9e6;
+    color: black;
+    font-size: 20px;
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border-radius: 10px;
+  }
+}
+
+/* !Large , designed iPad mimi, iPad Pro - also some landscape views*/
+@media only screen and (min-width: 1000px) and (max-height:1000px){
+  .logo-img {
+    width: 20%;
+    margin: 10px auto 60px;
+  }
+
+  .review-article h2 {
+    font-weight: 800;
+    font-size: 40px;
+    text-align: center;
+    margin: 60px auto 0px;
+    padding: 0px;
+    line-height: 1px;
+  }
+
+  h2.second-h2 {
+    /*!leave a review*/
+    margin-bottom: 100px;
+  }
+
+  h3.issue-h3 {
+    margin-bottom: 20px;
+  }
+
+  .review-article p {
+    padding: 0px 70px 0px;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 30px;
+    margin: 0px 0px 0px;
+  }
+
+  .review-article p.feedback-p {
+    /*! Feedback not only */
+    margin-top: 30px;
+  }
+
+  .stars-container {
+    width: 49%;
+    padding: 0px 0px;
+    border-radius: 0px;
+    margin: auto;
+    background-image: none;
+    background-color: whitesmoke;
+    padding: 0px 0px;
+    border: none;
+    border-left: 1px dashed black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    flex-direction: column;
+    margin: 0px auto 0px;
+    text-align: center;
+    float: left;
+  }
+
+  .star-widget label {
+    font-size: 35px; /*! Star size */
+    color: black;
+    padding: 15px;
+    float: right;
+    transition: all 0.2s ease;
+    margin: 10px auto 10px;
+  }
+
+   .star-widget{
+   border: 1px solid rgb(151, 151, 221);
+   padding: 1px 20px 1px;
+   border-radius: 30px;
+
+   }
+
+  form header {
+    width: 100%;
+    font-size: 40px;
+    padding-top: 25px;
+    color: black;
+  }
+
+  h2 {
+    font-family: "Poppins", sans-serif; /*! how can we improve*/
+    font-weight: 400;
+    font-size: 25px;
+    padding-bottom: 10px;
+    margin: 30px auto 10px;
+  }
+
+  h3 {
+    font-family: "Poppins", sans-serif; /*! take a moment*/
+    font-weight: 200;
+    font-size: 18px;
+  }
+
+  form .textarea {
+    width: 100%;
+    overflow: hidden;
+    padding-top: 0px;
+    color: black;
+  }
+
+  form .textarea textarea {
+    height: 100px;
+    width: 100%;
+    outline: none;
+    background-color: transparent;
+    padding: 10px;
+    font-size: 20px;
+    color: black;
+    font-weight: 100;
+    resize: none;
+  }
+
+  form .btn {
+    height: 50px;
+    width: 100%;
+    margin: 25px 0;
+  }
+
+  form .btn button {
+    height: 100%;
+    width: 100%;
+    border: none;
+    outline: none;
+    background: #a99aca;
+    color: black;
+    font-size: 20px;
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border-radius: 10px;
+  }
+
+  .container-all{
+    width: 100%;
+    overflow: hidden;
+  }
+
+  .title-wrapper, .stars-container{
+    width: 49%;
+    float: left;
+  }
+
+}
+
+/* !Large , designed Nest Hub*/
+@media only screen and (min-width: 1000px) and (max-height: 600px)
+{
+    .logo-img {
+        width: 10%;
+        margin: 10px auto 20px;
+      }
+
+
+}
+
+/* !Large , designed Surface Pro 7, iPad Pro*/
+@media only screen and (min-width: 1300px) and (min-height: 1000px) {
+    .logo-img {
+        width: 18%;
+        margin: 30px auto 10px;
+      }
+
+      .review-article h2 {
+        font-size: 40px;
+        line-height: 50px;
+      }
+
+      .stars-container{
+        width: 40%;
+      }
+
+      .review-article p {
+        padding: 0px 400px 0px;
+        font-size: 22px;
+        line-height: 40px;
+        margin: 0px 30px 0px;
+      }
+
+
+  
+      form header {
+        font-size: 50px;
+      }
+      
+      form .textarea {
+        width: 100%;
+        overflow: hidden;
+        padding-top: 10px;
+        color: white;
+      }
+      
+      form .textarea textarea {
+        font-size: 15px;
+        color: white;
+        font-weight: 400;
+        resize: none;
+      }
+      
+      form .btn {
+        height: 45px;
+        width: 100%;
+        margin: 15px 0;
+      }
+      
+      form .btn button {
+        height: 100%;
+        width: 100%;
+        border: 1px solid #444;
+        outline: none;
+        background: #d1b9e6;
+        color: black;
+        font-size: 17px;
+        font-family: "Poppins", sans-serif;
+        font-weight: 600;
+        text-transform: uppercase;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        border-radius: 5px;
+      }
+      
+      form .btn button:hover {
+        background: rgb(143, 47, 180);
+      }
+
+  }

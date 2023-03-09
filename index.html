@@ -1,0 +1,81 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>⭐ Tumbles Playhouse Reviews ⭐</title>
+
+    <!-- !Font Awesome -->
+    <script
+      src="https://kit.fontawesome.com/939ffca112.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- !Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- todo:meta tag is something that only the browser can see it -->
+    <!-- !Tells the device that the edge of the website should follow the edge of the device -->
+    <!-- todo:name is viewport - defines the type of the meta tag , means how the contents and widths need to be displayed inside the device-->
+    <!-- !content="width=device-width, tells the device that the edge of the website to follow the edge of the device -->
+    <!-- todo:initial-scale="1.0", tells the device to scale the contents inside the website so to match the device, and if you don't have this the text might appear too small inside the device, so we need to have this. -->
+    <!-- ?all above comment for below code -->
+
+    <meta name="viewport" content="width=device-width" , initial-scale="1.0" />
+
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+
+  <body>
+    <img class="logo-img" src="images/logoPNG.png" alt="Tumbles Logo" />
+    <div class="container-all">
+      <div class="title-wrapper">
+        <article class="review-article">
+          <h2 class="first-h2">Please leave us</h2>
+          <h2 class="second-h2">a review</h2>
+          <p>Please take a moment to review your experience with us.</p>
+          <p class="feedback-p">
+            Your feedback not only helps us, it helps other parents to know more
+            about us!
+          </p>
+        </article>
+      </div>
+
+      <!-- !Star rating system here >>> -->
+      <div class="stars-container">
+        <div class="star-widget">
+          <input type="radio" name="rate" id="rate-5" />
+          <label for="rate-5" class="fas fa-star"></label>
+          <input type="radio" name="rate" id="rate-4" />
+          <label for="rate-4" class="fas fa-star"></label>
+          <input type="radio" name="rate" id="rate-3" />
+          <label for="rate-3" class="fas fa-star"></label>
+          <input type="radio" name="rate" id="rate-2" />
+          <label for="rate-2" class="fas fa-star"></label>
+          <input type="radio" name="rate" id="rate-1" />
+          <label for="rate-1" class="fas fa-star"></label>
+
+          <!-- !form -->
+          <form action="#">
+            <header></header>
+            <div class="textarea">
+              <h2>How can we improve?</h2>
+              <h3>Please take a moment to let us know</h3>
+              <h3 class="issue-h3">about the issue you experienced</h3>
+              <textarea
+                cols="25"
+                placeholder="Please describe your experience.."
+              ></textarea>
+            </div>
+            <div class="btn">
+              <button type="submit">Submit</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
